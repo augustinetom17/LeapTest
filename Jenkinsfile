@@ -20,9 +20,9 @@ pipeline {
 		stage ('Deploy') {
 			steps {
 				sh '''
-				ssh root@$ServerIP rm -rf /var/test
-				ssh root@$ServerIP mkdir /var/test
-				scp -r * root@$ServerIP:/var/test
+				ssh root@${ServerIP} rm -rf /var/test
+				ssh root@${ServerIP} mkdir /var/test
+				scp -r * root@${ServerIP}:/var/test
 				'''
 			}
 		}
