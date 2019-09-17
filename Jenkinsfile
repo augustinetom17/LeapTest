@@ -3,7 +3,7 @@ pipeline {
 	parameters {
 		choice (
 			name: 'ServerIP'
-			choices: "192.168.20.172\n192.168.20.165"
+			choices: "192.168.20.172"
 			description: 'Server IPs to deploy' )
 		}
 	stages {
