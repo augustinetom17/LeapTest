@@ -1,10 +1,7 @@
 pipeline {
 	agent any
 	parameters {
-		choice (
-			name: 'ServerIP',
-			choices: ['192.168.20.172', '192.168.20.165'],
-			description: 'Server IPs to deploy' )
+		string(defaultValue: "TEST", description: 'Enter the IP: ?', name: 'ServerIP')
 		}
 	stages {
 		stage ('Clean Workspace') {
@@ -28,4 +25,3 @@ pipeline {
 		}
 	}
 }
-			
